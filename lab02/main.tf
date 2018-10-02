@@ -1,9 +1,9 @@
-module "server" {
+module "server-us-east-2" {
   source = "./server"
-  region       = "${var.region}"
+  region       = "us-east-2"
   num_webs     = "${var.num_webs}"
   identity     = "${var.identity}"
-  ami          = "${lookup(var.ami, var.region)}"
+  ami          = "${lookup(var.ami, "us-east-2")}"
   ingress_cidr = "${var.ingress_cidr}"
 }
 
