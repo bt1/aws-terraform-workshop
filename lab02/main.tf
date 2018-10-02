@@ -1,4 +1,4 @@
-module "server-us-east" {
+module "server" {
   source = "./server"
   region       = "us-east"
   num_webs     = "${var.num_webs}"
