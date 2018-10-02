@@ -7,3 +7,6 @@ module "server" {
   ingress_cidr = "${var.ingress_cidr}"
 }
 
+output "public_dns_us_east_2" {
+  value = "${module.server-us-east-2.public_dns}"
+}
